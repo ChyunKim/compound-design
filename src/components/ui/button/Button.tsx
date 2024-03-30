@@ -30,7 +30,9 @@ export function Button({
       type={type}
       className={clsx(
         `p-2 rounded-[4px] group flex justify-center items-center flex-shrink-0 border hover:border-gray300 hover:bg-gray100 hover:text-gray700,
-        ${variantMap[variant]} ${style && style} `
+        ${variantMap[variant]} ${style && style} ${
+          shape === 'rounded' ? 'rounded-full' : 'rounded-[4px]'
+        }`
       )}
       onClick={onClick}
     >
